@@ -1,0 +1,25 @@
+CMDServer is a Server that you can connect with CMDClient to perform Remote Execution,
+Remote Termination of processes and most tasks in the Command Interpreter.
+
+CMDServer can only run on NT Systems (NT,Win2K,XP)
+
+Due to the user validation the server does on remote connection attempts, the server must
+run on a machine there the loggedin user has adminstrative rights.
+
+Use CMDClient from any computer that can reach CMDServer to perform all
+Commands available from the commandprompt and those listed below
+
+CONNECT IP/Host[:Port] (Connect to CMDServer on Port = 512)
+EXIT (Close connection)
+REXIT (Close down cmdServer)
+CMDHELP (Show this help)
+GETRUNAPP (Show running apps)
+REXEC [FullPath/]Filename.ext [parameters] (Execute remote application)
+RTERM HWND (Close running app)
+CLS (Clear Screen)
+
+When a user want to make a remote connection to the server the user will be prompt for
+Username and password, the user most have administrator rights on the server.
+
+OBSERVER that if you remotly start an application via cmd the server will not return until the application is terminated.
+Use REXEC instead
